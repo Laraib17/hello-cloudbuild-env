@@ -58,10 +58,7 @@ steps:
 
 # Clone the repository
 - name: 'gcr.io/cloud-builders/git'
-  args:
-  - clone
-  - --recurse-submodules
-  - git@github.com:Laraib17/hello-cloudbuild-env.git
+  args: ['clone', 'https://github.com/Laraib17/hello-cloudbuild-env.git']
   volumes:
   - name: ssh
     path: /root/.ssh
